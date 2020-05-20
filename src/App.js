@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import api from './api';
 import { XMLNS_1_0 } from 'xmlchars';
+import { useState, useEffect } from 'react';
 
-const lista = [
-    { id: 1, name: 'Estudar', done: false},
-        { id: 1, name: 'Estudar', done: true},
-            { id: 1, name: 'Estudar', done: true}
-]
- 
+
 function App() {
+
+const [lista, setLista] = useState([]);
+
   return (
       <table> 
           {lista.map(item =>(    
